@@ -1,0 +1,134 @@
+# ==================== #
+# FICHIERS SENSIBLES - À NE JAMAIS COMMITTER #
+# ==================== #
+
+# Configuration sensible
+config/config.php          # Contient probablement les identifiants BDD
+includes/                  # Contient des classes, vérifier si sensible
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Clés API, tokens
+*.key
+*.pem
+*.crt
+*.cert
+
+# ==================== #
+# UPLOADS & DONNÉES UTILISATEUR #
+# ==================== #
+
+# Dossier d'uploads (si contient des fichiers uploadés par users)
+config/uploads/
+public/images/uploads/     # Si vous avez un dossier pour les uploads users
+
+# Dumps de base de données
+*.sql
+*.backup
+*.dump
+
+# Fichiers de base de données locaux
+*.db
+*.sqlite
+*.sqlite3
+
+# ==================== #
+# CACHE & TEMPORAIRE #
+# ==================== #
+
+# Sessions PHP
+sess_*
+*.session
+
+# Cache PHP
+cache/
+tmp/
+temp/
+
+# Logs d'erreurs
+*.log
+error_log
+php_error.log
+
+# Cache IDE
+.vscode/
+.idea/
+.phpstorm.meta.*
+*.swp
+*.swo
+*~
+
+# ==================== #
+# SYSTÈME & OS #
+# ==================== #
+
+# macOS
+.DS_Store
+__MACOSX/
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ==================== #
+# DÉPENDANCES & BUILD #
+# ==================== #
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Composer (si utilisé)
+vendor/
+composer.lock
+
+# ==================== #
+# FICHIERS DE DÉVELOPPEMENT #
+# ==================== #
+
+# Fichiers de backup
+*.bak
+*.backup
+*_old.php
+
+# Fichiers de test
+test.php
+debug.php
+phpinfo.php
+
+# Fichiers temporaires de téléchargement
+public/zip/               # Dossier zip semble être pour temporaire
+*.zip
+*.rar
+*.7z
+
+# ==================== #
+# VOTRE PROJET SPÉCIFIQUE #
+# ==================== #
+
+# Dossiers favicon en double (un semble être un backup)
+public/favicon_ioddd/     # "ddd" semble indiquer test/backup
+
+# Fichiers de backup CSS
+public/css/navbar_backup.css
+
+# Fichiers d'instructions (peut-être temporaire)
+REMEMBER_ME_INSTRUCTIONS.md
+
+# Ignorer tout sauf .gitkeep (pour garder le dossier)
+config/uploads/*
+!config/uploads/.gitkeep

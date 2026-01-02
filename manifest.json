@@ -1,0 +1,67 @@
+{
+  "name": "ALPHA COMMUNITY",
+  "short_name": "ALPHA",
+  "description": "Plateforme de partage communautaire - Découvrez, commentez et interagissez",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#c87533",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "public/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "public/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "public/favicon_io/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "public/favicon_io/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "public/favicon_io/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["social", "lifestyle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Créer un post",
+      "short_name": "Nouveau",
+      "description": "Créer une nouvelle publication",
+      "url": "/create-post.php",
+      "icons": [
+        {
+          "src": "public/favicon_io/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mon profil",
+      "short_name": "Profil",
+      "description": "Voir mon profil",
+      "url": "/profile.php",
+      "icons": [
+        {
+          "src": "public/favicon_io/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
