@@ -3,36 +3,35 @@
   "short_name": "ALPHA Admin",
   "description": "Tableau de bord d'administration - Gestion des utilisateurs, contenus et statistiques",
   "start_url": "/admin/",
-  "scope": "/admin/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#00D4FF",
   "orientation": "any",
   "icons": [
     {
-      "src": "/admin/public/admin_favicon_io/android-chrome-192x192.png",
+      "src": "public/favicon_io/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/admin/public/admin_favicon_io/android-chrome-512x512.png",
+      "src": "public/favicon_io/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/admin/public/admin_favicon_io/favicon.ico",
+      "src": "public/favicon_io/favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "/admin/public/admin_favicon_io/favicon-32x32.png",
+      "src": "public/favicon_io/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/admin/public/admin_favicon_io/favicon-16x16.png",
+      "src": "public/favicon_io/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     }
@@ -47,7 +46,7 @@
       "url": "/admin/dashboard.php",
       "icons": [
         {
-          "src": "/admin/public/admin_favicon_io/android-chrome-192x192.png",
+          "src": "public/favicon_io/android-chrome-192x192.png",
           "sizes": "192x192"
         }
       ]
@@ -59,7 +58,7 @@
       "url": "/admin/manage-users.php",
       "icons": [
         {
-          "src": "/admin/public/admin_favicon_io/android-chrome-192x192.png",
+          "src": "public/favicon_io/android-chrome-192x192.png",
           "sizes": "192x192"
         }
       ]
@@ -71,7 +70,7 @@
       "url": "/admin/statistics.php",
       "icons": [
         {
-          "src": "/admin/public/admin_favicon_io/android-chrome-192x192.png",
+          "src": "public/favicon_io/android-chrome-192x192.png",
           "sizes": "192x192"
         }
       ]

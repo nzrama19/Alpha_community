@@ -11,10 +11,10 @@ require_once __DIR__ . '/php/moderation_logic.php';
 
     <!-- Favicon Admin -->
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/x-icon" href="public/admin_favicon_io/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/admin_favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/admin_favicon_io/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="public/admin_favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="public/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/n_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon_io/apple-touch-icon.png">
     <meta name="theme-color" content="#00D4FF">
 
     <link rel="stylesheet" href="public/css/moderation.css">

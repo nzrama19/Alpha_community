@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/php/dashboard_logic.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,16 +17,15 @@ require_once __DIR__ . '/php/dashboard_logic.php';
 
     <!-- Manifest et Favicon Admin -->
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/x-icon" href="public/admin_favicon_io/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/admin_favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/admin_favicon_io/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="public/admin_favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="public/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon_io/apple-touch-icon.png">
     <meta name="theme-color" content="#00D4FF">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="ALPHA">
-
-
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="../public/css/page-loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -42,7 +42,7 @@ require_once __DIR__ . '/php/dashboard_logic.php';
                 <div class="loader-arc loader-arc-1"></div>
                 <div class="loader-arc loader-arc-2"></div>
                 <div class="loader-logo-circle">
-                    <img src="public/admin_favicon_io/android-chrome-192x192.png" alt="Admin Logo" class="loader-logo-img">
+                    <img src="public/favicon_io/android-chrome-192x192.png" alt="Admin Logo" class="loader-logo-img">
                 </div>
             </div>
             <div class="loader-logo-container">

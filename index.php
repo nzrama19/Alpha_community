@@ -25,7 +25,7 @@ require_once __DIR__ . '/php/index_logic.php';
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="ALPHA">
-
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/page-loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
