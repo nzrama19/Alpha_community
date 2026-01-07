@@ -1,0 +1,4 @@
+# ===== SÉCURITÉ DOSSIER INCLUDES =====
+# Bloquer l'accès direct aux fichiers du dossier includes
+Order allow,deny
+Deny from all

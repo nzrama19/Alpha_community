@@ -1,0 +1,26 @@
+# ===== SÉCURITÉ DOSSIER ADMIN =====
+
+# Protéger le dossier admin avec un mot de passe HTTP (optionnel)
+
+# Décommenter les lignes ci-dessous pour activer
+
+# AuthType Basic
+
+# AuthName "Admin Area"
+
+# AuthUserFile /path/to/.htpasswd
+
+# Require valid-user
+
+# Blocker l'accès aux fichiers sensibles
+
+<FilesMatch "\.(bak|backup|tmp|sql|log)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Bloquer l'exécution de certains scripts
+
+<FilesMatch "manifest\.json$">
+Header set Access-Control-Allow-Origin "self"
+</FilesMatch>

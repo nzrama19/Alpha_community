@@ -1,0 +1,26 @@
+# ===== SÉCURITÉ DOSSIER CONFIG =====
+
+# Bloquer l'accès à tous les fichiers du dossier config
+
+Order allow,deny
+Deny from all
+
+# Autoriser l'accès au dossier uploads uniquement
+
+<Directory "uploads">
+Order allow,deny
+Allow from all
+</Directory>
+
+# Bloquer l'exécution de scripts dans uploads
+
+<FilesMatch "\.php$">
+Deny from all
+</FilesMatch>
+
+# Empêcher la lecture des fichiers sensibles
+
+<FilesMatch "\.env|\.htaccess|config\.php|config\.example\.php">
+Order allow,deny
+Deny from all
+</FilesMatch>
