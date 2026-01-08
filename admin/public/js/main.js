@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Créer l'élément commentaire
                     const commentDiv = document.createElement('div');
                     commentDiv.className = 'comment';
-                    const avatarSrc = data.comment.avatar ? `../config/uploads/${data.comment.avatar}` : `../public/images/default-avatar.png`;
+                    const avatarSrc = data.comment.avatar ? `../config/uploads/${data.comment.avatar}` : `https://ui-avatars.com/api/?name=${encodeURIComponent(data.comment.username)}&background=d4a574&color=fff`;
                     commentDiv.innerHTML = `
                         <img src="${avatarSrc}" alt="Avatar" class="avatar-small">
                         <div class="comment-content">

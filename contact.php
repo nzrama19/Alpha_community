@@ -157,6 +157,9 @@ require_once __DIR__ . '/php/contact_logic.php';
 
     <?php include_once 'footer.php'; ?>
 
+    <script>
+        window.BASE_URL = '<?php echo rtrim(BASE_URL, "/"); ?>';
+    </script>
     <script src="public/js/main.js"></script>
 </body>
 

@@ -33,7 +33,7 @@ require_once __DIR__ . '/php/index_logic.php';
 </head>
 
 <body class="modern-layout">
-    <!-- Page Loader - Style Prime Tech -->
+    <!-- Page Loader -->
     <div class="page-loader">
         <div class="loader-glow-left"></div>
         <div class="loader-content">
@@ -119,6 +119,7 @@ require_once __DIR__ . '/php/index_logic.php';
                 </div>
             </div>
         <?php endif; ?>
+
         <?php if (empty($posts)): ?>
             <!-- aucune publication -->
             <div class="empty-state">
@@ -147,7 +148,7 @@ require_once __DIR__ . '/php/index_logic.php';
                                             // Tous les avatars/photos sont dans UPLOAD_URL
                                             echo UPLOAD_URL . escape($post['avatar']);
                                         } else {
-                                            echo BASE_URL . 'public/images/default-avatar.png';
+                                            echo 'https://ui-avatars.com/api/?name=' . urlencode($post['username']) . '&background=d4a574&color=fff';
                                         }
                                         ?>" alt="Avatar" class="avatar">
                             <div class="post-info">
@@ -249,7 +250,7 @@ require_once __DIR__ . '/php/index_logic.php';
                             <div class="comments-list">
                                 <?php foreach ($comments as $comment): ?>
                                     <div class="comment" data-comment-id="<?php echo $comment['id']; ?>">
-                                        <img src="<?php echo !empty($comment['avatar']) ? UPLOAD_URL . escape($comment['avatar']) : BASE_URL . 'public/images/default-avatar.png'; ?>" alt="Avatar" class="avatar-small">
+                                        <img src="<?php echo !empty($comment['avatar']) ? UPLOAD_URL . escape($comment['avatar']) : 'https://ui-avatars.com/api/?name=' . urlencode($comment['username']) . '&background=d4a574&color=fff'; ?>" alt="Avatar" class="avatar-small">
                                         <div class="comment-content">
                                             <div class="comment-header">
                                                 <strong><?php echo escape($comment['username']); ?></strong>
@@ -263,13 +264,7 @@ require_once __DIR__ . '/php/index_logic.php';
 
                             <?php if (isUserLoggedIn()): ?>
                                 <form class="comment-form" data-post-id="<?php echo $post['id']; ?>">
-                                    <img src="<?php
-                                                if (!empty($_SESSION['avatar'])) {
-                                                    echo UPLOAD_URL . escape($_SESSION['avatar']);
-                                                } else {
-                                                    echo 'https://ui-avatars.com/api/?name=' . urlencode($_SESSION['username']) . '&background=d4a574&color=fff';
-                                                }
-                                                ?>" alt="Avatar" class="avatar-small">
+                                    <img src="<?php echo !empty($comment['avatar']) ? UPLOAD_URL . escape($comment['avatar']) : 'https://ui-avatars.com/api/?name=' . urlencode($comment['username']) . '&background=d4a574&color=fff'; ?>" alt="Avatar" class="avatar-small">
                                     <input type="text"
                                         name="comment"
                                         placeholder="Écrivez un commentaire..."
@@ -346,6 +341,9 @@ require_once __DIR__ . '/php/index_logic.php';
         </video>
     </div>
 
+    <script>
+        window.BASE_URL = '<?php echo rtrim(BASE_URL, "/"); ?>';
+    </script>
     <script src="public/js/main.js"></script>
     <script src="public/js/posts-media.js"></script>
     <script src="public/js/page-loader.js"></script>

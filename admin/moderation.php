@@ -101,7 +101,7 @@ require_once __DIR__ . '/php/moderation_logic.php';
                                             if (!empty($p['avatar'])) {
                                                 echo UPLOAD_URL . escape($p['avatar']);
                                             } else {
-                                                echo BASE_URL . 'public/images/default-avatar.png';
+                                                echo 'https://ui-avatars.com/api/?name=' . urlencode($p['username']) . '&background=d4a574&color=fff';
                                             }
                                             ?>" alt="Avatar" class="author-avatar">
                                 <div class="author-details">
@@ -248,6 +248,9 @@ require_once __DIR__ . '/php/moderation_logic.php';
         <img id="modalImage" class="modal-content-media">
     </div>
 
+    <script>
+        window.BASE_URL = '<?php echo rtrim(BASE_URL, "/"); ?>';
+    </script>
     <script src="../public/js/main.js"></script>
     <script src="public/js/admin-moderation.js"></script>
 </body>

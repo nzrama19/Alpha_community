@@ -110,7 +110,7 @@ require_once __DIR__ . '/php/dashboard_logic.php';
                                             // Les photos/avatars sont tous dans UPLOAD_URL maintenant
                                             echo UPLOAD_URL . escape($p['avatar']);
                                         } else {
-                                            echo BASE_URL . 'public/images/default-avatar.png';
+                                            echo 'https://ui-avatars.com/api/?name=' . urlencode($p['username']) . '&background=d4a574&color=fff';
                                         }
                                         ?>" alt="Avatar" class="avatar">
                             <div class="post-info">
@@ -196,6 +196,9 @@ require_once __DIR__ . '/php/dashboard_logic.php';
         </video>
     </div>
 
+    <script>
+        window.BASE_URL = '<?php echo rtrim(BASE_URL, "/"); ?>';
+    </script>
     <script src="../public/js/main.js"></script>
     <script src="public/js/admin-dashboard.js"></script>
     <script src="../public/js/page-loader.js"></script>

@@ -54,7 +54,7 @@ require_once __DIR__ . '/php/create_post_logic.php';
                             if (!empty($_SESSION['avatar'])) {
                                 echo UPLOAD_URL . escape($_SESSION['avatar']);
                             } else {
-                                echo 'public/images/default-avatar.png';
+                                echo 'https://ui-avatars.com/api/?name=' . urlencode($_SESSION['username']) . '&background=d4a574&color=fff';
                             }
                             ?>" alt="Avatar" class="avatar-small">
                 <div class="user-details">

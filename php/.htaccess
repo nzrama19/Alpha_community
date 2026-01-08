@@ -1,4 +1,0 @@
-# ===== SÉCURITÉ DOSSIER PHP =====
-# Bloquer l'accès direct aux fichiers du dossier php
-Order allow,deny
-Deny from all

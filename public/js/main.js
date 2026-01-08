@@ -2,12 +2,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // Déterminer automatiquement le chemin de base
+    // main.js - remplacer la fonction getBasePath()
     const getBasePath = () => {
-        // Récupérer le chemin jusqu'à la racine du projet
-        const currentPath = window.location.pathname;
-        // Supposer que la racine du projet se termine avant /index.php ou /admin/dashboard.php
-        const basePath = currentPath.split('/').slice(0, -1).join('/');
-        return basePath === '' ? '/' : basePath;
+        // Utiliser window.BASE_URL défini dans index.php
+        if (typeof window.BASE_URL !== 'undefined') {
+            return window.BASE_URL;
+        }
+        
+        // Fallback : récupérer depuis la balise base ou l'URL actuelle
+        const baseTag = document.querySelector('base');
+        if (baseTag && baseTag.href) {
+            return baseTag.href;
+        }
+        
+        // Dernier recours : utiliser l'origine actuelle
+        return window.location.origin;
     };
     
     const BASE_PATH = getBasePath();
@@ -156,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Créer l'élément commentaire
                     const commentDiv = document.createElement('div');
                     commentDiv.className = 'comment';
-                    const avatarSrc = data.comment.avatar ? `${BASE_PATH}/config/uploads/${data.comment.avatar}` : `${BASE_PATH}/public/images/default-avatar.png`;
+                    const avatarSrc = data.comment.avatar ? `${BASE_PATH}/config/uploads/${data.comment.avatar}` : `https://ui-avatars.com/api/?name=${encodeURIComponent(data.comment.username)}&background=d4a574&color=fff`;
                     commentDiv.innerHTML = `
                         <img src="${avatarSrc}" alt="Avatar" class="avatar-small">
                         <div class="comment-content">

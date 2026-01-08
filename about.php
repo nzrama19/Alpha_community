@@ -127,6 +127,9 @@ require_once __DIR__ . '/php/about_logic.php';
 
     <?php include_once 'footer.php'; ?>
 
+    <script>
+        window.BASE_URL = '<?php echo rtrim(BASE_URL, "/"); ?>';
+    </script>
     <script src="public/js/main.js"></script>
 </body>
 
